@@ -1,4 +1,4 @@
-#include "../Drill6/my.h"
+#include "../my.h"
 
 int main() {
 	foo = 7;
