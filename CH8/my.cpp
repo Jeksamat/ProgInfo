@@ -1,5 +1,5 @@
-#include "../Drill6/my.h"
-#include "../Drill6/std_lib_facilities.h"
+#include "../my.h"
+#include "../std_lib_facilities.h"
 
 int foo;
 
