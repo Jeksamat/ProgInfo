@@ -2,24 +2,26 @@
 #include "../std_lib_facilities.h"
 
 struct Point {
-	double X;
-	double Y;
+	int X;
+	int Y;
 };
-//1 2 3 4 5 6 7,8 (9 10) (11,12)
+//1 2 13 4 5 6 7,8 (9 10)
 int main() 
 try {
 	//containers
 	vector<Point> original_points;
-	vector<double> Xs;
-	vector<double> Ys;
+	vector<int> Xs;
+	vector<int> Ys;
 	//variables
-	double n;
+	int n = 0;
 	//promt
 	cout << "Enter 7 (x,y) pairs:" << endl;
 	//READ
+	//no escape
 	while (true) {
 		cin >> n;
 		if (cin) {
+			cout << n << ' ';//self check
 			if (Xs.size() > Ys.size())
 				Ys.push_back(n);
 			else
@@ -27,14 +29,19 @@ try {
 		}
 		else if (cin.fail()) {
 			cin.clear();
-			for (char ch; cin >> ch && !isdigit(ch);)
+			for (char ch; cin >> ch && !isdigit(ch);) {
 				;
+			}
 			if (!cin)
 				error("No input");
 			cin.unget();
 		}
 		else {
 			error("No input");
+		}
+		//doesn't check - WHY?
+		if (cin.eof()) {
+			break;
 		}
 	}	
 	//WRITE
