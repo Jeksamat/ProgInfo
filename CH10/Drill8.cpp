@@ -5,7 +5,7 @@ struct Point {
 	double X;
 	double Y;
 };
-//1 2 13 4 5 6 7,8 (9 10)
+//1 2 13 4 5.1 6 7,8 (9 10) 1 1 2 2
 int main() 
 try {
 	//containers
@@ -17,7 +17,7 @@ try {
 	//promt
 	cout << "Enter 7 (x,y) pairs:" << endl;
 	//READ
-	while (true) { //no escape
+	while (Xs.size() < 7 || Ys.size() < 7) { //no escape
 		cin >> n;
 		if (cin) {
 			cout << n << ' ';//self check
@@ -37,10 +37,6 @@ try {
 		}
 		else {
 			error("No input");
-		}
-		//doesn't check - WHY?
-		if (cin.eof()) {
-			break;
 		}
 	}	
 	//WRITE
