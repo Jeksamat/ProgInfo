@@ -2,23 +2,22 @@
 #include "../std_lib_facilities.h"
 
 struct Point {
-	int X;
-	int Y;
+	double X;
+	double Y;
 };
 //1 2 13 4 5 6 7,8 (9 10)
 int main() 
 try {
 	//containers
 	vector<Point> original_points;
-	vector<int> Xs;
-	vector<int> Ys;
+	vector<double> Xs;
+	vector<double> Ys;
 	//variables
-	int n = 0;
+	double n = 0;
 	//promt
 	cout << "Enter 7 (x,y) pairs:" << endl;
 	//READ
-	//no escape
-	while (true) {
+	while (true) { //no escape
 		cin >> n;
 		if (cin) {
 			cout << n << ' ';//self check
