@@ -1,1 +1,2 @@
-
+First done with vector pointers to ensure they are allocated on new memory, and deleteable.
+Later realised simple vectors are just as fine for the job hence the simplifed versions.
